@@ -4,6 +4,8 @@ React로 만든 웹 기반 SVG 편집기입니다.
 A web-based SVG editor built with React.  
 Reactで作ったWebベースのSVGエディタです。
 
+**데모 / Demo / デモ**: [https://seokhyun0079.github.io/svg-editor/](https://seokhyun0079.github.io/svg-editor/)
+
 ---
 
 ## 실행 방법 / How to run / 実行方法
@@ -95,9 +97,9 @@ npm run dev
 
 ## GitHub에 올리기 / Pushing to GitHub / GitHubへのアップロード
 
-- `node_modules/`, `dist/` 등은 `.gitignore`에 포함되어 커밋되지 않습니다.  
-  `node_modules/` and `dist/` are in `.gitignore` and will not be committed.  
-  `node_modules/` と `dist/` は `.gitignore` に含まれるためコミットされません。
+- `node_modules/`, `dist/` 는 `.gitignore`에 있어 커밋되지 않습니다. **빌드 결과는 `docs/`** 에 출력되며 **`docs/`는 커밋**합니다 (GitHub Pages용).  
+  `node_modules/` and `dist/` are in `.gitignore`; the **build output goes to `docs/`**, which **is committed** for GitHub Pages.  
+  `node_modules/` と `dist/` は `.gitignore` に含まれます。**ビルド結果は `docs/`** に出力され、**`docs/` はコミット**します（GitHub Pages用）。
 
 ```bash
 git add .
@@ -106,6 +108,6 @@ git remote add origin https://github.com/<사용자명>/<저장소명>.git
 git push -u origin main
 ```
 
-- **GitHub Pages** 배포: `npm run build` 후 **dist** 폴더를 배포하세요. (dist는 .gitignore에 있으므로, 빌드 결과를 커밋할 브랜치를 쓰거나 GitHub Actions를 사용하세요.) 저장소 **Settings → Pages**에서 소스를 설정하고, `vite.config.js`의 `base`가 `'/svg-editor/'`이므로 저장소 이름을 `svg-editor`로 두면 `https://<사용자명>.github.io/svg-editor/` 에서 접속할 수 있습니다.  
-- **GitHub Pages** deployment: Run `npm run build` and deploy the **dist** folder (e.g. branch that commits dist or GitHub Actions). In **Settings → Pages** set the source; with repo name `svg-editor` the site will be at `https://<username>.github.io/svg-editor/`.  
-- **GitHub Pages** での公開: `npm run build` のあと **dist** フォルダをデプロイしてください。（dist は .gitignore に入っているため、ビルド結果をコミットするブランチを使うか GitHub Actions を利用してください。）リポジトリの **Settings → Pages** でソースを設定し、`vite.config.js` の `base` が `'/svg-editor/'` のため、リポジトリ名を `svg-editor` にすると `https://<ユーザー名>.github.io/svg-editor/` でアクセスできます。
+- **GitHub Pages** 배포: 빌드 결과는 **`docs/`** 에 들어가며 이미 커밋되어 있습니다. 저장소 **Settings → Pages**에서 **Source**: Deploy from a branch, **Branch**: `main`, **Folder**: **`/docs`** 로 선택한 뒤 Save하면 `https://<사용자명>.github.io/svg-editor/` 에서 접속할 수 있습니다. (저장소 이름이 `svg-editor`일 때)  
+- **GitHub Pages**: Build output is in **`docs/`** and is committed. In **Settings → Pages** choose **Branch**: `main`, **Folder**: **`/docs`**, then Save. Site will be at `https://<username>.github.io/svg-editor/` (when repo name is `svg-editor`).  
+- **GitHub Pages**: ビルド結果は **`docs/`** にありコミット済みです。**Settings → Pages** で **Branch**: `main`、**Folder**: **`/docs`** を選んで保存すると、`https://<ユーザー名>.github.io/svg-editor/` でアクセスできます（リポジトリ名が `svg-editor` の場合）。
