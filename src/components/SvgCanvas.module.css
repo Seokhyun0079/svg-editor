@@ -1,0 +1,31 @@
+.wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 0;
+}
+
+.svg {
+  width: 100%;
+  max-width: 90vmin;
+  height: auto;
+  max-height: 70vh;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-dark);
+}
+
+/* 선택된 도형: 원래 색 유지, 위에 점선 오버레이만 깜빡임 */
+.selectedShape [data-selection-overlay] {
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-dasharray: 8 4;
+  animation: selectedBlink 0.8s ease-in-out infinite;
+}
+
+@keyframes selectedBlink {
+  0%, 100% { stroke-opacity: 1; }
+  50% { stroke-opacity: 0.35; }
+}

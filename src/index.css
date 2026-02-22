@@ -1,0 +1,70 @@
+:root {
+  --bg-dark: #1a1b26;
+  --bg-panel: #24283b;
+  --bg-hover: #2d3142;
+  --accent: #7aa2f7;
+  --accent-dim: #565f89;
+  --text: #c0caf5;
+  --text-dim: #a9b1d6;
+  --border: #3b4261;
+  --success: #9ece6a;
+  --danger: #f7768e;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: var(--bg-panel);
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+
+button:hover {
+  background: var(--bg-hover);
+  color: var(--accent);
+}
+
+button.active {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+input, select {
+  font-family: inherit;
+  background: var(--bg-dark);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.35rem 0.5rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+label {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}

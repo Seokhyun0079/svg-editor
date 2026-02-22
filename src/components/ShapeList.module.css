@@ -1,0 +1,59 @@
+.panel {
+  width: 180px;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+  padding: 0.75rem;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+  cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.item button:first-child {
+  flex: 1;
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+}
+
+.item button.active {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+.delete {
+  padding: 0.2rem 0.5rem !important;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.delete:hover {
+  color: var(--danger);
+}
+
+.empty {
+  font-size: 0.8rem;
+  color: var(--accent-dim);
+  padding: 0.5rem 0;
+}
